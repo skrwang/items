@@ -23,6 +23,16 @@ const r = [
   {
     path:'/declare',
     component:declare.default, 
+    children:[
+      {
+        path:'/declare/media',
+        component:require('./components/declare/media/media.vue').default,
+      },
+      {
+        path:'/declare/participant',
+        component:require('./components/declare/participant/participant.vue').default,
+      }
+    ]
   }
 ];
 
