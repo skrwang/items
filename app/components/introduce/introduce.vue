@@ -1,7 +1,7 @@
 <template>
     <div class="box">
         <div class="head">
-            <div></div>
+            <div class="paopao"></div>
             <p>"Future Humanity"</p>
             <p>"未来演化"</p>
         </div>
@@ -27,6 +27,15 @@
         background-color: #fff;
         margin: 0 auto;
         padding: 20% 0px;
+        position: relative;
+    }
+    .head .paopao{
+        width: 100%;
+        height: 10rem;
+        position: absolute;
+        top: 0;
+        background: url(../../assets/paopao.png);
+        background-size: 100% 100%;
     }
     .head p{
         color: rgb(82, 202, 236);

@@ -13,7 +13,7 @@
                 <p class="Chinese2 tit">正式开启</p>
             </div>
             <div class="logo">
-                <i class=""></i>
+                <i class="up"></i>
                 <p class="tit topup">向上滑动</p>
             </div>
         </div>
@@ -233,6 +233,15 @@ export default {
         -webkit-animation: logo 1.5s infinite;
         animation: logo 1.5s infinite;
         background:url(assets/01.png);
+        background-size: 100% 100%;
+    }
+    .logo .up{
+        position: absolute;
+        top: 90px;
+        left: 35%;
+        width: 100px;
+        height: 40px;
+        background: url(assets/shang.png);
         background-size: 100% 100%;
     }
     .topup{
