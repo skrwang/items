@@ -13,7 +13,7 @@ const jury  = require('./components/jury/jury.vue');
 const declare  = require('./components/declare/declare.vue');
 const r = [
   {
-    path:'/',
+    path:'/introduce/',
     component:index.default, 
   },
   {

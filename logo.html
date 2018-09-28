@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            width: 100%;
+            height: 100%;
+            background-color: #52caec;
+        }
+        .box1{
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+        .screen1{
+            width: 100%;
+            height: 140px;
+            position: relative;
+            border-bottom: 1px solid #e1dcd3;
+            border-radius: 50%;
+        }
+        .character{
+            width: 80%;
+            height: 237px;
+            margin: 0 auto;
+            margin-top: 45px;
+        }
+        .year{
+            width: 100%;
+            color: #e4dcd3;
+            font-weight: bold;
+            position: relative;
+        }
+        .fine{
+            width: 100%;
+            color: #e4dcd3;
+            font-weight: bold; 
+            position: relative;
+            
+        }
+        .Chinese{
+            width: 100%;
+            color: #e4dcd3;
+            font-weight: bold;
+            white-space:nowrap;
+            position: relative;
+
+        }
+        .Chinese2{
+            width: 100%;
+            color: #e4dcd3;
+            font-weight: bold;
+            white-space:nowrap;
+            position: relative;
+            letter-spacing:0.3rem;
+        }
+        .year{
+            animation-name:year;
+	        animation-duration:1s;
+	        animation-timing-function:linear;
+	        animation-delay:0s;
+	        animation-iteration-count:1;
+	        animation-direction:alternate;
+	        animation-play-state:running;
+	        animation-fill-mode: both;
+        }
+        .fine{
+            animation-name:fine;
+	        animation-duration:1s;
+	        animation-timing-function:linear;
+	        animation-delay:0s;
+	        animation-iteration-count:1;
+	        animation-direction:alternate;
+	        animation-play-state:running;
+	        animation-fill-mode: both;
+        }
+        .Chinese,.Chinese2{
+            animation-name:Chinese;
+	        animation-duration:1s;
+	        animation-timing-function:linear;
+	        animation-delay:0s;
+	        animation-iteration-count:1;
+	        animation-direction:alternate;
+	        animation-play-state:running;
+	        animation-fill-mode: both;
+        }
+        @keyframes year{
+            0%{
+                left: -150px;
+            }
+            100%{
+                left: 0;
+            }
+        }
+        @keyframes fine{
+            0%{
+                transform: scale(3)
+            }
+            100%{
+                transform: scale(1)
+            }
+        }
+        @keyframes Chinese{
+            0%{
+                top: 25rem;
+            }
+            100%{
+                top: 0;
+            }
+        }
+        .title{
+            border: none;
+            letter-spacing:0.8rem;
+            font-size:25px;
+        }
+        .tit{
+            width:100%;       
+            text-align: center;
+            margin: 0 auto;
+            margin-top:10px; 
+            font-size: 30px;
+            letter-spacing:0.8rem;
+        }
+        @media screen and (max-width: 320px){
+            h1,.title {
+                font-size: 20px;
+            }
+
+        }
+        .logo{
+            width: 100%;
+            height: 193px;
+            position: relative;
+            margin-top: 50px;
+            -webkit-animation: logo 1.5s infinite;
+            animation: logo 1.5s infinite;
+        }
+        .topup{
+            position: absolute;
+            bottom: 20px;
+            font-size: 25px;
+            color: #e4dcd3;
+            font-weight: bold;
+        }
+        @keyframes logo{
+            0% {
+                transform: translate(0, 30%);
+            }
+            50% {
+                transform: translate(0, 0%);
+            }
+            100% {
+                transform: translate(0, 30%);
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <script>
+        var windowHeight = document.documentElement.clientHeight || document.body.clientHeight;
+        //信号量
+        var startY, distanceY;
+
+        document.addEventListener('touchstart', touchstartHandle, false);
+        document.addEventListener('touchmove', touchmoveHandle, false);
+        document.addEventListener('touchend', touchendHandle, false);
+        function touchstartHandle(event) {
+            if (event.touches.length > 1) {
+                return;
+            }
+            //记录开始值
+            startY = event.touches[0].clientY;
+        }
+        function touchmoveHandle(event) {
+            //计算手指的移动距离
+            distanceY = event.touches[0].clientY - startY;
+            //判断如果是最上边的那一页和最下边的那一页均不作处理
+            if (distanceY > 0) {
+                return;
+            } else if (distanceY < 0) {
+                return;
+            }
+            if (distanceY > 0) {
+               return;
+            } else if (distanceY < 0) {
+                return;
+            }
+        }
+        function touchendHandle(event) {
+            if (distanceY > 0) {
+                console.log(5555)
+            } else if (distanceY < 0) {
+                window.location.href = "index.html";
+            }
+            //根据distanceY判断是否滑动成功
+            if (distanceY < -windowHeight / 4) {
+                window.location.href = "index.html";
+            } else if (distanceY > windowHeight / 4) {
+                //手指向下滑动成功
+                console.log(11111,'成功');
+            } else {
+
+            }
+        }
+    </script>
+</body>
+</html>
