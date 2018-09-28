@@ -48,18 +48,18 @@ export default {
         margin:0 auto;
         /* background-color: #fff; */
         color: rgb(228, 220, 211);
-        padding-top:73px;
+        padding-top:5rem;
     }
     .box .content h1 {
         text-align: center;
-        font-size: 20px;
+        font-size: 1.5rem;
         margin-bottom: 42px;
         letter-spacing:3px;
         font-weight: 500;
     }
     .box .content p {
         margin-bottom: 35px;
-        font-size: 18px;
+        font-size: 1.2rem;
         letter-spacing: 1.5px;
     }
     .box .content .btn {
