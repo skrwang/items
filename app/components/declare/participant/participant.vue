@@ -33,39 +33,39 @@ export default {
         return {
             list:[
                 {
-                    img:"../../../assets/beike.png",
-                    text:"麒 麟 : 共 生 之 城",
-                    name:"李 贝 壳+孙 天 艺",
+                    img:"./app/assets/beike.png",
+                    text:"麒麟 : 共生  之城",
+                    name:"李贝壳+孙天艺",
                     btn:"给她投票"
                 },
                 {
-                    img:"../../../assets/qianxi.png",
-                    text:"启 示 ： 另 类 未 来 的 召 唤",
-                    name:"刘 倩 兮",
+                    img:"./app/assets/qianxi.png",
+                    text:"启示：另类未来的召唤",
+                    name:"刘倩兮",
                     btn:"给她投票"
                 },
                 {
-                    img:"../../../assets/mengxi.png",
-                    text:"药 理 学 、 赛 博 格 与 非 物 质 劳 动",
+                    img:"./app/assets/mengxi.png",
+                    text:"药理学、赛博格与非物质劳动",
                     name:"姚 梦 溪",
                     btn:"给她投票"
                 },
                 {
-                    img:"../../../assets/weiwei.png",
-                    text:"“ 近 未 来 ” 的 回 旋",
-                    name:"王 慰 慰",
+                    img:"./app/assets/weiwei.png",
+                    text:"“ 近未来 ” 的回旋",
+                    name:"王慰慰",
                     btn:"给她投票"
                 },
                 {
-                    img:"../../../assets/ying.png",
-                    text:"未 来 演 化",
-                    name:"钱 颖",
+                    img:"./app/assets/ying.png",
+                    text:"未来演化",
+                    name:"钱颖",
                     btn:"给她投票"
                 },
                 {
-                    img:"../../../assets/xingru.png",
-                    text:"撒 谎 的 索 菲 亚 和 嘲 讽 的 埃 里 克 莎",
-                    name:"龙 晨 如",
+                    img:"./app/assets/xingru.png",
+                    text:"撒谎的索菲亚和嘲讽的埃里克莎",
+                    name:"龙晨如",
                     btn:"给她投票"
                 }
             ]
@@ -80,12 +80,13 @@ export default {
         width: 100%;
         background: none;
         border: 1px solid rgb(236,221,210);
+        outline: none;
     }
     i{font-weight: normal;}
-    img{width: 100%;height: 100%;}
     .html{color:rgb(236,221,210);}
     .TheCurator{
         width: 100%;
+        height: 100%;
         margin: 0 auto;
         font-family: "微软雅黑";
     }
@@ -93,7 +94,7 @@ export default {
         width: 80%;
         margin: 0 auto;
         text-align: center;
-        padding: 3rem 0;
+        padding: 2rem 0;
         font-size: 1.5rem;
         h4 {
             font-weight: 400;
@@ -105,36 +106,57 @@ export default {
         .body_text {
             font-size: 1rem;
             color: #fff;
-            margin-bottom: 1.2rem;
+            margin-bottom: 1rem;
         }
-    }
-    .body_juese{
-        width: 100%;
-        height: 100%;
-    }
-    .body_juese ul{
-        width: 100%;
-        height: 100%;
-    }
-    .body_juese ul li{
-        width:cale(100 / 3);
-        height: 205px;
-        float: left;
-        margin-left: 0.5%;
-        margin-top: 5%;
-        position: relative;
-    }
-    .body_juese ul li span{
-        font-size: 91%;
-    }
-    .body_juese ul li p{
-        font-size: 70%;
-    }
-    button{
-        position: absolute;
-        bottom: -2%;
-        font-size: 70%;
-        line-height: 220%;
+        .body_juese{
+            width: 100%;
+            height: 100%;
+            ul {
+                // width: 100%;
+                overflow: hidden;
+                li {
+                    width:calc(100% / 3);
+                    float: left;
+                    position: relative;
+                    box-sizing: border-box;
+                    margin-bottom: 1rem;
+                    height: 220px;
+                    img {
+                        width: 100%;
+                        margin-bottom: 0.5rem;
+                        margin-left: 1px;
+                    }
+                    span {
+                        font-size: 1.1rem;
+                        display: inline-block;
+                    }
+                    p {
+                        font-size:.9rem;
+                        margin-bottom: 1.4rem;
+                    }
+                    button {
+                        width: 100%;
+                        height: 30px;
+                        line-height: 30px;
+                        text-align: center;
+                        position: absolute;
+                        left: 0;
+                        bottom: 0;
+                    }
+                }
+                li:nth-child(1){
+                    span {
+
+                        padding-right: 17px;
+                    }
+                }
+                li:nth-child(2){
+                    span {
+                        padding-right: 10px;
+                    }
+                }
+            }
+        }
     }
 </style>
 
