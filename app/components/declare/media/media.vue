@@ -39,6 +39,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+    input,button {
+        outline: none;
+    }
     .media {
         width: 100%;
         height: 100%;
@@ -106,6 +109,8 @@ export default {
                         width: 100%;
                         height: 4rem;
                         line-height: 4rem;
+                        position: relative;
+                        z-index: 555;
                     }
                     .code {
                         margin-top: 5rem;
